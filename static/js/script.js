@@ -11,27 +11,27 @@ document.addEventListener('contextmenu', function (event) {
     event.preventDefault();
 });
 
-function handlePress(event) {
-    this.classList.add('pressed');
-}
+// function handlePress(event) {
+//     this.classList.add('pressed');
+// }
 
-function handleRelease(event) {
-    this.classList.remove('pressed');
-}
+// function handleRelease(event) {
+//     this.classList.remove('pressed');
+// }
 
-function handleCancel(event) {
-    this.classList.remove('pressed');
-}
+// function handleCancel(event) {
+//     this.classList.remove('pressed');
+// }
 
-var buttons = document.querySelectorAll('.projectItem');
-buttons.forEach(function (button) {
-    button.addEventListener('mousedown', handlePress);
-    button.addEventListener('mouseup', handleRelease);
-    button.addEventListener('mouseleave', handleCancel);
-    button.addEventListener('touchstart', handlePress);
-    button.addEventListener('touchend', handleRelease);
-    button.addEventListener('touchcancel', handleCancel);
-});
+// var buttons = document.querySelectorAll('.projectItem');
+// buttons.forEach(function (button) {
+//     button.addEventListener('mousedown', handlePress);
+//     button.addEventListener('mouseup', handleRelease);
+//     button.addEventListener('mouseleave', handleCancel);
+//     button.addEventListener('touchstart', handlePress);
+//     button.addEventListener('touchend', handleRelease);
+//     button.addEventListener('touchcancel', handleCancel);
+// });
 
 // function toggleClass(selector, className) {
 //     var elements = document.querySelectorAll(selector);
@@ -88,9 +88,17 @@ function getCookie(name) {
 
 
 
+// var closeButton = document.querySelector('.close-button');
+// var box = document.querySelector('.tc');
 
+// closeButton.addEventListener('click', function() {
+//   box.style.display = 'none';
+// });
 
-
+// var openButten = document.querySelector('#page222');
+// openButten.addEventListener('click',function(){
+//     box.style.display='flex';
+// });
 
 
 
