@@ -110,10 +110,15 @@ var closeAll=document.querySelectorAll('.information');
 
 Button_CV_CN.addEventListener('click',function(){
     View_CV.style.display='flex';
+    Button_Close_CV.style.display='flex';
+    Content_CV.style.display='flex';
     Content_CV.src='./static/pdf/CV_CN.pdf';
+    
 });
 Button_CV_EN.addEventListener('click',function(){
     View_CV.style.display='flex';
+    Button_Close_CV.style.display='flex';
+    Content_CV.style.display='flex';
     Content_CV.src='./static/pdf/CV_EN.pdf';
 });
 
@@ -122,7 +127,7 @@ Button_Close_CV.addEventListener('click',function(){
     Content_CV.src='';
     Button_Close_CV.style.display='none';//dont sure
     Content_CV.style.display='none';
-    closeAll.style.display='none';
+    closeAll.style.display='none';//wait for add
 });
 
 
