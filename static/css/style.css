@@ -612,7 +612,7 @@ body {
     /* height: 800px; */
     /* height: 1000px; */
     background: none;
-    display: flex;
+    display: none;
     flex-direction: column;
     /* display: none; */
     /* background-color: #d8eaff; */
@@ -621,7 +621,8 @@ body {
 .pdfpage{
     height: 50vh;
     width: 100%;
-
+    /* visibility: hidden; */
+    
     /* display: none; */
     /* style:"border: 0"; */
     /* frameborder="0"; */
@@ -964,4 +965,24 @@ footer {
     font-size: 24px;
     cursor: pointer;
 
+}
+
+.close {
+    position: relative;
+    background-color: whitesmoke;
+    /* top: 0vw; */
+    left: 0vw;
+        /* top: -31.5vw; */
+    /* top: 50vw; */
+    width: 40px;
+    height: 20px;
+    /* line-height: 0vw; */
+    text-align: center;
+    color: #222;
+    cursor: pointer;
+    
+}
+
+.information{
+    display: flex;
 }
