@@ -139,7 +139,7 @@ Button_undergraduate.addEventListener('click',function(){
     Button_Close_Info_page.style.display='flex';
     View_imgpage.style.display='flex';
     Content_PIC.style.display='flex';
-    Content_PIC.src='./static/img/transcript1.JPG';
+    Content_PIC.src='./static/img/transcript1.jpg';
 });
 Button_master.addEventListener('click',function(){
     closeAllwindow(); 
@@ -147,7 +147,7 @@ Button_master.addEventListener('click',function(){
     Button_Close_Info_page.style.display='flex';
     View_imgpage.style.display='flex';
     Content_PIC.style.display='flex';
-    Content_PIC.src='./static/img/transcript2.JPG';
+    Content_PIC.src='./static/img/transcript2.jpg';
 });
 
 var Button_certificate1=document.querySelector('#certificate1');
