@@ -139,7 +139,7 @@ Button_undergraduate.addEventListener('click',function(){
     Button_Close_Info_page.style.display='flex';
     View_imgpage.style.display='flex';
     Content_PIC.style.display='flex';
-    Content_PIC.src='./static/img/本科成绩.JPG';
+    Content_PIC.src='./static/img/transcript1.JPG';
 });
 Button_master.addEventListener('click',function(){
     closeAllwindow(); 
@@ -147,7 +147,7 @@ Button_master.addEventListener('click',function(){
     Button_Close_Info_page.style.display='flex';
     View_imgpage.style.display='flex';
     Content_PIC.style.display='flex';
-    Content_PIC.src='./static/img/硕士成绩单.JPG';
+    Content_PIC.src='./static/img/transcript2.JPG';
 });
 
 var Button_certificate1=document.querySelector('#certificate1');
@@ -159,7 +159,7 @@ Button_certificate1.addEventListener('click',function(){
     Button_Close_Info_page.style.display='flex';
     View_imgpage.style.display='flex';
     Content_PIC.style.display='flex';
-    Content_PIC.src='./static/img/荣誉证书1.jpg';
+    Content_PIC.src='./static/img/certificate1.jpg';
 });
 Button_certificate2.addEventListener('click',function(){
     closeAllwindow();
@@ -167,7 +167,7 @@ Button_certificate2.addEventListener('click',function(){
     Button_Close_Info_page.style.display='flex';
     View_imgpage.style.display='flex';
     Content_PIC.style.display='flex';
-    Content_PIC.src='./static/img/荣誉证书2.jpg';
+    Content_PIC.src='./static/img/certificate2.jpg';
 });
 var Button_paper1=document.querySelector('#paper1');
 var Button_paper2=document.querySelector('#paper2');
