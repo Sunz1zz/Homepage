@@ -1,62 +1,62 @@
-console.log('%cCopyright © 2024 zyyo.net',
-    'background-color: #ff00ff; color: white; font-size: 24px; font-weight: bold; padding: 10px;'
-);
-console.log('%c   /\\_/\\', 'color: #8B4513; font-size: 20px;');
-console.log('%c  ( o.o )', 'color: #8B4513; font-size: 20px;');
-console.log(' %c  > ^ <', 'color: #8B4513; font-size: 20px;');
-console.log('  %c /  ~ \\', 'color: #8B4513; font-size: 20px;');
-console.log('  %c/______\\', 'color: #8B4513; font-size: 20px;');
+// console.log('%cCopyright © 2024 zyyo.net',
+//     'background-color: #ff00ff; color: white; font-size: 24px; font-weight: bold; padding: 10px;'
+// );
+// console.log('%c   /\\_/\\', 'color: #8B4513; font-size: 20px;');
+// console.log('%c  ( o.o )', 'color: #8B4513; font-size: 20px;');
+// console.log(' %c  > ^ <', 'color: #8B4513; font-size: 20px;');
+// console.log('  %c /  ~ \\', 'color: #8B4513; font-size: 20px;');
+// console.log('  %c/______\\', 'color: #8B4513; font-size: 20px;');
 
 document.addEventListener('contextmenu', function (event) {
     event.preventDefault();
 });
 
-// function handlePress(event) {
-//     this.classList.add('pressed');
-// }
+function handlePress(event) {
+    this.classList.add('pressed');
+}
 
-// function handleRelease(event) {
-//     this.classList.remove('pressed');
-// }
+function handleRelease(event) {
+    this.classList.remove('pressed');
+}
 
-// function handleCancel(event) {
-//     this.classList.remove('pressed');
-// }
+function handleCancel(event) {
+    this.classList.remove('pressed');
+}
 
-// var buttons = document.querySelectorAll('.projectItem');
-// buttons.forEach(function (button) {
-//     button.addEventListener('mousedown', handlePress);
-//     button.addEventListener('mouseup', handleRelease);
-//     button.addEventListener('mouseleave', handleCancel);
-//     button.addEventListener('touchstart', handlePress);
-//     button.addEventListener('touchend', handleRelease);
-//     button.addEventListener('touchcancel', handleCancel);
-// });
+var buttons = document.querySelectorAll('.projectItem');
+buttons.forEach(function (button) {
+    button.addEventListener('mousedown', handlePress);
+    button.addEventListener('mouseup', handleRelease);
+    button.addEventListener('mouseleave', handleCancel);
+    button.addEventListener('touchstart', handlePress);
+    button.addEventListener('touchend', handleRelease);
+    button.addEventListener('touchcancel', handleCancel);
+});
 
-// function toggleClass(selector, className) {
-//     var elements = document.querySelectorAll(selector);
-//     elements.forEach(function (element) {
-//         element.classList.toggle(className);
-//     });
-// }
+function toggleClass(selector, className) {
+    var elements = document.querySelectorAll(selector);
+    elements.forEach(function (element) {
+        element.classList.toggle(className);
+    });
+}
 
-// function pop(imageURL) {
-//     var tcMainElement = document.querySelector(".tc-img");
-//     if (imageURL) {
-//         tcMainElement.src = imageURL;
-//     }
-//     toggleClass(".tc-main", "active");
-//     toggleClass(".tc", "active");
-// }
+function pop(imageURL) {
+    var tcMainElement = document.querySelector(".tc-img");
+    if (imageURL) {
+        tcMainElement.src = imageURL;
+    }
+    toggleClass(".tc-main", "active");
+    toggleClass(".tc", "active");
+}
 
-// var tc = document.getElementsByClassName('tc');
-// var tc_main = document.getElementsByClassName('tc-main');
-// tc[0].addEventListener('click', function (event) {
-//     pop();
-// });
-// tc_main[0].addEventListener('click', function (event) {
-//     event.stopPropagation();
-// });
+var tc = document.getElementsByClassName('tc');
+var tc_main = document.getElementsByClassName('tc-main');
+tc[0].addEventListener('click', function (event) {
+    pop();
+});
+tc_main[0].addEventListener('click', function (event) {
+    event.stopPropagation();
+});
 
 
 
@@ -100,47 +100,104 @@ function getCookie(name) {
 //     box.style.display='flex';
 // });
 
-var View_CV=document.querySelector('.CV_Page');
-var Content_CV=document.querySelector('.pdfpage');
+var View_Info_page=document.querySelector('.Info_Page');
+var Content_pdf=document.querySelector('.pdfpage');
 var Button_CV_CN=document.querySelector('#CV_CN');
 var Button_CV_EN=document.querySelector('#CV_EN');
-var Button_Close_CV=document.querySelector('#close_CV_Page');
-var closeAll=document.querySelectorAll('.information');
+var Button_Close_Info_page=document.querySelector('#close_Info_Page');
+
 
 
 Button_CV_CN.addEventListener('click',function(){
-    View_CV.style.display='flex';
-    Button_Close_CV.style.display='flex';
-    Content_CV.style.display='flex';
-    Content_CV.src='./static/pdf/CV_CN.pdf';
+    closeAllwindow();
+    View_Info_page.style.display='flex';
+    Button_Close_Info_page.style.display='flex';
+    Content_pdf.style.display='flex';
+    Content_pdf.src='./static/pdf/CV_CN.pdf';
     
 });
 Button_CV_EN.addEventListener('click',function(){
-    View_CV.style.display='flex';
-    Button_Close_CV.style.display='flex';
-    Content_CV.style.display='flex';
-    Content_CV.src='./static/pdf/CV_EN.pdf';
+    closeAllwindow();    
+    View_Info_page.style.display='flex';
+    Button_Close_Info_page.style.display='flex';
+    Content_pdf.style.display='flex';
+    Content_pdf.src='./static/pdf/CV_EN.pdf';
 });
-
-Button_Close_CV.addEventListener('click',function(){
-    // View_CV.style.display='none';
-    Content_CV.src='';
-    Button_Close_CV.style.display='none';//dont sure
-    Content_CV.style.display='none';
-    closeAll.style.display='none';//wait for add
+Button_Close_Info_page.addEventListener('click',function(){
+    closeAllwindow();
 });
 
 
+var View_imgpage=document.querySelector('.imgpage');
+var Content_PIC=document.querySelector('#picture');
+var Button_undergraduate=document.querySelector('#undergraduate');
+var Button_master=document.querySelector('#master');
 
+Button_undergraduate.addEventListener('click',function(){
+    closeAllwindow(); 
+    View_Info_page.style.display='flex';
+    Button_Close_Info_page.style.display='flex';
+    View_imgpage.style.display='flex';
+    Content_PIC.style.display='flex';
+    Content_PIC.src='./static/img/本科成绩.JPG';
+});
+Button_master.addEventListener('click',function(){
+    closeAllwindow(); 
+    View_Info_page.style.display='flex';
+    Button_Close_Info_page.style.display='flex';
+    View_imgpage.style.display='flex';
+    Content_PIC.style.display='flex';
+    Content_PIC.src='./static/img/硕士成绩单.JPG';
+});
 
+var Button_certificate1=document.querySelector('#certificate1');
+var Button_certificate2=document.querySelector('#certificate2');
+var Button_certificate3=document.querySelector('#certificate3');
+Button_certificate1.addEventListener('click',function(){
+    closeAllwindow();
+    View_Info_page.style.display='flex';
+    Button_Close_Info_page.style.display='flex';
+    View_imgpage.style.display='flex';
+    Content_PIC.style.display='flex';
+    Content_PIC.src='./static/img/荣誉证书1.jpg';
+});
+Button_certificate2.addEventListener('click',function(){
+    closeAllwindow();
+    View_Info_page.style.display='flex';
+    Button_Close_Info_page.style.display='flex';
+    View_imgpage.style.display='flex';
+    Content_PIC.style.display='flex';
+    Content_PIC.src='./static/img/荣誉证书2.jpg';
+});
+var Button_paper1=document.querySelector('#paper1');
+var Button_paper2=document.querySelector('#paper2');
+var Button_paper3=document.querySelector('#paper3');
+Button_paper1.addEventListener('click',function(){
+    closeAllwindow();    
+    View_Info_page.style.display='flex';
+    Button_Close_Info_page.style.display='flex';
+    Content_pdf.style.display='flex';
+    Content_pdf.src='./static/pdf/Paper1.pdf';
+});
+Button_paper2.addEventListener('click',function(){
+    closeAllwindow();    
+    View_Info_page.style.display='flex';
+    Button_Close_Info_page.style.display='flex';
+    Content_pdf.style.display='flex';
+    Content_pdf.src='./static/pdf/Paper2.pdf';
+});
 
+function closeAllwindow(){
+    View_Info_page.style.display='none';
+    // console.log('ssss')
+    Content_pdf.src='';
+    Content_pdf.style.display='none';
+    Content_PIC.src='';
+    View_imgpage.style.display='none';
 
+    Button_Close_Info_page.style.display='none';//dont sure
 
-
-
-
-
-
+}
 
 document.addEventListener('DOMContentLoaded', function () {
 
